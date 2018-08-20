@@ -52,8 +52,8 @@ class Transaction
             throw new RuntimeException("Invalid address");
         }
         if (Converter.longValue(trits, 6966, 27) <1508760000L) {
-		System.out.println(Converter.trytes(trits,0,8019));
-		System.out.println("Invalid timestamp");
+		System.out.println(Converter.trytes(trits,0,8019)); // added for debugging
+		System.out.println("Invalid timestamp");	    // added for debugging
             throw new RuntimeException("Invalid timestamp");
         }
         final Curl curl = new Curl();
